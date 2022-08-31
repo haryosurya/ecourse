@@ -1,0 +1,138 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+// @import 'variables';
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
+@import "~datatables.net-buttons-bs4/css/buttons.bootstrap4.css"; 
+
+@import '~jquery-ui/themes/base/all.css';
+// import google fonts
+@import 'font/fonts';
+@import 'font/simple-line-icons';
+@import 'font/weather-icons';
+@import 'font/feather';
+// @import "~font-awesome/css/font-awesome.css";
+// @import '~@fortawesome/fontawesome-free/scss/brands';
+// @import '~@fortawesome/fontawesome-free/scss/regular';
+// @import '~@fortawesome/fontawesome-free/scss/solid';
+// @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+
+@import "mixins/responsive";
+@import "mixins/clearfix";
+@import "mixins/css3";
+
+// project base scss
+@import 'base/colors';
+@import 'base/variables';
+@import 'base/font';
+@import 'base/ui-variables';
+@import 'base/helpers';
+@import "base/general";
+
+// ui kit scss
+@import 'uikit/functions';
+@import 'uikit/layout';
+@import 'uikit/aside';
+@import 'uikit/header';
+@import 'uikit/sidebar';
+@import 'uikit/footer';
+@import 'uikit/text';
+@import 'uikit/utilities';
+@import 'uikit/type';
+@import 'uikit/grid';
+@import 'uikit/uikit';
+
+// Page scss
+@import 'page/sparkline';
+@import 'page/charts';
+@import 'page/jvectormap';
+@import 'page/social';
+@import 'page/chat';
+@import 'page/timeline';
+@import 'page/example';
+@import 'page/inbox';
+@import 'page/calendar';
+@import 'page/blog';
+@import 'page/profile';
+
+// Project Widgets
+@import 'page/widgets';
+@import 'page/widgets-statistics';
+@import 'page/widgets-data';
+@import 'page/widgets-social';
+
+@import 'skins/dark.scss';
+@import 'skins/theme1.scss';
+
+
+/* 1. Variable */
+@import "variable";
+
+/* 2. Mixin */
+@import "mixin";
+
+/* 3. Bootstrap Override */
+/* 3.1 Misc */
+@import "override/misc";
+/* 3.2 Form */
+@import "override/form";
+/* 3.3 List */
+@import "override/list";
+/* 3.4 Alert */
+@import "override/alert";
+/* 3.5 Card */
+@import "override/card";
+/* 3.6 Table */
+@import "override/table";
+/* 3.7 Tooltip */
+@import "override/tooltip";
+/* 3.8 Modal */
+@import "override/modal";
+/* 3.9 Nav */
+@import "override/nav";
+/* 3.10 Pagination */
+@import "override/pagination";
+/* 3.11 Badge */
+@import "override/badge";
+/* 3.12 Button */
+@import "override/button";
+/* 3.13 Media */
+@import "override/media";
+/* 3.14 Breadcrumb */
+@import "override/breadcrumb";
+/* 3.15 Accordion */
+@import "override/accordion";
+/* 3.16 Popover */
+@import "override/popover";
+/* 3.17 Grid */
+@import "override/grid";
+/* 3.18 Navbar */
+@import "override/navbar";
+/* 3.19 Dropdown */
+@import "override/dropdown";
+/* 3.20 Dropdown */
+@import "override/tab";
+/* 3.21 Progress Bar */
+@import "override/progressbar";
+/* 3.22 Jumbotron */
+@import "override/jumbotron";
+/* 3.23 Carousel */
+@import "override/carousel";
+
+/* 4. Theme Style */
+/* 4.1 Misc */
+@import "theme/misc";
+/* 4.2 Section */
+@import "theme/section";
+/* 4.3 Page */
+@import "theme/page";
+/* 4.4 Layout */
+@import "theme/layout";
+/* 4.5 Animation */
+@import "theme/animation";
