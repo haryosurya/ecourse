@@ -13,7 +13,7 @@ class AddDatesToCourseTesttable extends Migration
      */
     public function up()
     {
-        Schema::table('course_tests', function (Blueprint $table) { 
+        Schema::table('course_test', function (Blueprint $table) { 
             $table->timestamp('opening_date')->nullable();
             $table->timestamp('closing_date')->nullable(); 
         });
@@ -26,7 +26,7 @@ class AddDatesToCourseTesttable extends Migration
      */
     public function down()
     {
-        Schema::table('course_tests', function (Blueprint $table) {
+        Schema::table('course_test', function (Blueprint $table) {
             //
         });
     }
