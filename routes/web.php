@@ -66,10 +66,10 @@ Route::group(['middleware'=>['auth','admin',\App\Http\Middleware\UserLimit::clas
     Route::any('account/email','AccountController@email')->name('account.email');
     Route::any('account/password','AccountController@password')->name('account.password');
     Route::any('account/profile','AccountController@profile')->name('account.profile');
-    Route::any('articles/index','ArticlesController@index')->name('articles.index');
-    Route::any('articles/add','ArticlesController@add')->name('articles.add');
-    Route::any('articles/edit/{id}','ArticlesController@edit')->name('articles.edit');
-    Route::any('articles/delete/{id}','ArticlesController@delete')->name('articles.delete');
+    // Route::any('articles/index','ArticlesController@index')->name('articles.index');
+    // Route::any('articles/add','ArticlesController@add')->name('articles.add');
+    // Route::any('articles/edit/{id}','ArticlesController@edit')->name('articles.edit');
+    // Route::any('articles/delete/{id}','ArticlesController@delete')->name('articles.delete');
     Route::any('assignment/index','AssignmentController@index')->name('assignment.index');
     Route::any('assignment/add','AssignmentController@add')->name('assignment.add');
     Route::any('assignment/edit/{id}','AssignmentController@edit')->name('assignment.edit');
