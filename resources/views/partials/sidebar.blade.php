@@ -51,8 +51,8 @@
                         <li class="g_heading">
                             <i class="fas fa-download"></i><span>{{ __lang('downloads') }}</span> 
                         </li>
-                        @can('access','add_download')<li ><a class="nav-link" href="@route('admin.download.add')">{{ __lang('create-download') }}</a></li>@endcan
                         @can('access','view_downloads')<li ><a class="nav-link" href="@route('admin.download.index')">{{ __lang('all-downloads') }}</a></li>@endcan
+                        @can('access','add_download')<li ><a class="nav-link" href="@route('admin.download.add')">{{ __lang('create-download') }}</a></li>@endcan
                     @endcan
                  </ul>
              </nav>

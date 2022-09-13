@@ -8,24 +8,24 @@
         <div role="tabpanel" class="tab-pane vivify fadeIn active" id="Settings" aria-expanded="true">
             <div>
                 <h6 class="font-14 font-weight-bold  text-muted">General Settings</h6>
-                <ul class="setting-list  mt-1 ">
+                <ul class=" setting-list list-unstyled mt-1 ">
                     @can('access','edit_site_settings')<li ><a class="nav-link" href="@route('admin.setting.index')">{{ __lang('site-settings') }}</a></li>@endcan 
                     @can('access','edit_registration_field')<li ><a class="nav-link" href="@route('admin.setting.fields')">{{ __lang('custom-student-fields') }}</a></li>@endcan
 
-                    @can('access','edit_site_settings')<li ><a class="nav-link" href="@route('admin.setting.language')">{{ __lang('language') }}</a></li>@endcan
-                    @can('access','view_themes')<li ><a class="nav-link" href="@route('admin.templates')">{{ __lang('site-theme') }}</a></li>@endcan
-                    @can('access','view_payment_methods')<li ><a class="nav-link" href="@route('admin.payment-gateways')">{{ __lang('payment-methods') }}</a></li>@endcan
+                    {{-- @can('access','edit_site_settings')<li ><a class="nav-link" href="@route('admin.setting.language')">{{ __lang('language') }}</a></li>@endcan --}}
+                    {{-- @can('access','view_themes')<li ><a class="nav-link" href="@route('admin.templates')">{{ __lang('site-theme') }}</a></li>@endcan --}}
+                    {{-- @can('access','view_payment_methods')<li ><a class="nav-link" href="@route('admin.payment-gateways')">{{ __lang('payment-methods') }}</a></li>@endcan --}}
 
-                    @can('access','view_coupons')<li ><a class="nav-link" href="@route('admin.payment.coupons')">{{ __lang('coupons') }}</a></li>@endcan
-                    @can('access','manage_currencies')<li ><a class="nav-link" href="@route('admin.setting.currencies')">{{ __lang('currencies') }}</a></li>@endcan
-                    @can('access','configure_sms_gateways')<li ><a class="nav-link" href="@route('admin.smsgateway.index')">{{ __lang('sms-setup') }}</a></li>@endcan
+                    {{-- @can('access','view_coupons')<li ><a class="nav-link" href="@route('admin.payment.coupons')">{{ __lang('coupons') }}</a></li>@endcan --}}
+                    {{-- @can('access','manage_currencies')<li ><a class="nav-link" href="@route('admin.setting.currencies')">{{ __lang('currencies') }}</a></li>@endcan --}}
+                    {{-- @can('access','configure_sms_gateways')<li ><a class="nav-link" href="@route('admin.smsgateway.index')">{{ __lang('sms-setup') }}</a></li>@endcan --}}
 
                     @can('access','view_roles')<li ><a class="nav-link" href="@route('admin.roles.index')">{{ __lang('roles') }}</a></li>@endcan
                     @can('access','view_admins')<li ><a class="nav-link" href="@route('admin.admins.index')">{{ __lang('administrators-instructors') }}</a></li>@endcan
                     @can('access','view_test_grades')<li ><a class="nav-link" href="@route('admin.setting.testgrades')">{{ __lang('grades') }}</a></li>@endcan
                     @can('access','view_widgets')<li ><a class="nav-link" href="@route('admin.widget.index')">{{ __lang('homepage-widgets') }}</a></li>@endcan 
-                    <li><a class="nav-link" href="{{ route('admin.menus.header') }}">@lang('default.header-menu')</a></li> 
-                    <li><a class="nav-link" href="{{ route('admin.menus.footer') }}">@lang('default.footer-menu')</a></li>
+                    {{-- <li><a class="nav-link" href="{{ route('admin.menus.header') }}">@lang('default.header-menu')</a></li>  --}}
+                    {{-- <li><a class="nav-link" href="{{ route('admin.menus.footer') }}">@lang('default.footer-menu')</a></li> --}}
                     @can('access','view_email_notifications')
                     <li><a class="nav-link" href="@route('admin.messages.emails')">{{ __lang('email-notifications') }}</a></li>
                     @endcan
