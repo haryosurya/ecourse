@@ -2,7 +2,7 @@
 
 return [
     'message' => 'Pesan',
-    'dashboard' => 'Dasbor',
+    'dashboard' => 'Dashboard',
     'add-new' => 'Tambah baru',
     'online-course' => 'Kursus online',
     'training-session' => 'Sesi pelatihan',
@@ -1953,7 +1953,7 @@ Salam, <br/>
     'reserve' => 'Memesan',
     'credit-card' => 'Kartu kredit',
     'gateway' => 'pintu gerbang',
-    'default-gateway' => 'Gerbang Default',
+    'default-gateway' => 'Default Gateway',
     'mobile' => 'Seluler',
     'mobile-ass-sub-msg1' => 'Anda sudah mengirimkan tugas ini. Anda masih bisa mengeditnya',
     'mobile-ass-sub-msg2' => 'Anda telah mengirimkan tugas ini dan Anda tidak dapat lagi mengeditnya',
