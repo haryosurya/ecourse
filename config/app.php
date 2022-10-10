@@ -234,5 +234,7 @@ return [
     'upload_path'=>env('UPLOAD_PATH','uploads'),
     'credits'=>env('CREDITS','true'), 
     'laminas_driver'=>env('LAMINAS_DRIVER','Pdo_Mysql'),
+    'app_author'=>env('APP_AUTHOR','Yosu'),
+    'author_url'=>env('APP_AUTHOR_URL','https://yosu.space')
 
 ];
