@@ -59,17 +59,11 @@ class Helpers {
                     'mail.driver' => 'smtp',
                     'mail.host' => setting('mail_smtp_host'),
                     'mail.port' => setting('mail_smtp_port'),
-                    'mail.encryption' => 'ssl',
+                    'mail.encryption' =>'tls',
                     'mail.username' => setting('mail_smtp_username'),
                     'mail.password' => setting('mail_smtp_password')
                 ]);
-
-   /*             $app = App::getInstance();
-
-
-                $app->singleton('swift.transport', function ($app) {
-                    return new \Illuminate\Mail\TransportManager($app);
-                });*/
+ 
 
                 $transport = new \Swift_SmtpTransport(setting('mail_smtp_host'), setting('mail_smtp_port'));
                 $transport->setUsername(setting('mail_smtp_username'));
