@@ -59,7 +59,7 @@ class Helpers {
                     'mail.driver' => 'smtp',
                     'mail.host' => setting('mail_smtp_host'),
                     'mail.port' => setting('mail_smtp_port'),
-                    'mail.encryption' =>'tls',
+                    'mail.encryption' => 'ssl',
                     'mail.username' => setting('mail_smtp_username'),
                     'mail.password' => setting('mail_smtp_password')
                 ]);
