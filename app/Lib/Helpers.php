@@ -56,7 +56,7 @@ class Helpers {
             $protocol = setting('mail_protocol');
             if($protocol=='smtp'){
                 config([
-                    'mail.driver' => 'smtp',
+                    'mail.driver' => 'sendmail',
                     'mail.host' => setting('mail_smtp_host'),
                     'mail.port' => setting('mail_smtp_port'),
                     'mail.encryption' =>'ssl',
