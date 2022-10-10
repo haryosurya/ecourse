@@ -167,7 +167,7 @@
                                 <div class="alert alert-{{ $msg }} alert-dismissible show fade">
                                     <div class="alert-body">
                                         <button class="close" data-dismiss="alert">
-                                            <span>&times;</span>
+                                            <span></span>
                                         </button>
                                         {!! clean(Session::get('alert-' . $msg)) !!}
                                     </div>
@@ -178,7 +178,7 @@
                             <div class="alert alert-success alert-dismissible show fade">
                                 <div class="alert-body">
                                     <button class="close" data-dismiss="alert">
-                                        <span>&times;</span>
+                                        <span></span>
                                     </button>
                                     {!! clean(Session::get('flash_message')) !!}
                                 </div>
@@ -189,7 +189,7 @@
                             <div class="alert alert-success alert-dismissible show fade">
                                 <div class="alert-body">
                                     <button class="close" data-dismiss="alert">
-                                        <span>&times;</span>
+                                        <span></span>
                                     </button>
                                     {!! clean($flash_message) !!}
                                 </div>
