@@ -1,5 +1,9 @@
 <div class="hleft">
-    <a class="header-brand" href="@route('admin.dashboard')"><i class="fa fa-graduation-cap brand-logo"></i></a>
+    <a class="header-brand" href="@route('admin.dashboard')">
+        <span class="avatar" style="background-image: url({{ asset(setting('image_icon')) }})"></span>
+
+        {{-- <i class="fa fa-graduation-cap brand-logo"></i> --}}
+    </a>
     <div class="dropdown">
         <a href="javascript:void(0)" class="nav-link icon menu_toggle"><i class="fe fe-align-center"></i></a>
         @can('access-group','files')

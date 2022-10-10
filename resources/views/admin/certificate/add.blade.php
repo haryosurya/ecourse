@@ -78,9 +78,10 @@
 									<label for="image" class="control-label">{{ __lang('certificate-image') }}(A4 {{ __lang('size') }} - 595 {{ __lang('pixels') }} x 842 {{ __lang('pixels') }})</label><br />
 
 
-                               <div class="image"><img data-name="image" src="{{ $display_image }}" alt="" id="thumb" /><br />
+                <div class="image"><img data-name="image" src="{{ $display_image }}" alt="" id="thumb" /><br />
                   {{ formElement($form->get('image')) }}
                   <a class="pointer" onclick="image_upload('image', 'thumb');">{{ __lang('browse') }}</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="pointer" onclick="$('#thumb').attr('src', '{{ $no_image }}'); $('#image').attr('value', '');">{{ __lang('clear') }}</a></div>
+                  <p class="help-block">{{ formElementErrors($form->get('image')) }}</p>
 
 </div>
 

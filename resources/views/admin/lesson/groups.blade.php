@@ -22,19 +22,15 @@
             <div class="card-body">
                 <table class="table table-hover">
                     <thead>
-                    <tr>
-                        <th>{{ __lang('sort-order') }}</th>
+                    <tr> 
                         <th>{{ __lang('name') }}</th>
                         <th  >{{ __lang('actions') }}</th>
                     </tr>
                     </thead>
                     <tbody>
                     @php foreach($paginator as $row):  @endphp
-                        <tr>
-                            <td><span class="label label-success">{{ $row->sort_order }}</span></td>
-                            <td>{{ $row->name }}</td>
-
-
+                        <tr> 
+                            <td>{{ $row->name }}</td> 
                             <td  >
                                 <a href="{{ adminUrl(array('controller'=>'lesson','action'=>'editgroup','id'=>$row->id)) }}" class="btn  btn-primary" data-toggle="tooltip" data-placement="top" data-original-title="{{__lang('edit')}}"><i class="fa fa-edit"></i></a>
 

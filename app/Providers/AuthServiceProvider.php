@@ -88,8 +88,6 @@ class AuthServiceProvider extends ServiceProvider
                   if($user->admin->adminRole->permissions()->where('id',$permission->id)->first()){
                         return true;
                     }
-
-
             }
 
             return false;

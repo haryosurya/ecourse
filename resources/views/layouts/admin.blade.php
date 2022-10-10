@@ -66,7 +66,7 @@
         <!-- Start Rightbar setting panel -->
         @include('partials.settingbar')
         <!-- Start Theme panel do not add in project -->
-        <div class="theme_div">
+        {{-- <div class="theme_div">
             <div class="card">
                 <div class="card-body">
                     <ul class="list-group list-unstyled">
@@ -85,7 +85,7 @@
                     </ul>
                 </div>
             </div>        
-        </div>
+        </div> --}}
         <!-- Start Quick menu with more functio -->
         
         <!-- Start Main leftbar navigation -->

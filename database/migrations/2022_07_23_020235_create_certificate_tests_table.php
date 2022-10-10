@@ -13,7 +13,7 @@ class CreateCertificateTestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('certificate_tests', function (Blueprint $table) {
+        Schema::create('certificate_test', function (Blueprint $table) {
             $table->unsignedBigInteger('certificate_id');
             $table->foreign('certificate_id')->references('id')->on('certificates')->onDelete('cascade');
             $table->unsignedBigInteger('test_id');
@@ -30,6 +30,6 @@ class CreateCertificateTestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('certificate_tests');
+        Schema::dropIfExists('certificate_test');
     }
 }

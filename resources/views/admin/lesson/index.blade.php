@@ -68,8 +68,7 @@
 								<tr>
 									<th>{{ __lang('id') }}</th>
 									<th>{{ __lang('name') }}</th>
-                                    <th>{{ __lang('class-type') }}</th>
-									<th>{{ __lang('sort-order') }}</th>
+                                    <th>{{ __lang('class-type') }}</th> 
                                     @php if(GLOBAL_ACCESS): @endphp
                                     <th>{{ __lang('created-by') }}</th>
                                     @php endif;  @endphp
@@ -85,9 +84,7 @@
                                     @php if($row->type=='c'): @endphp
                                         ( <a style="text-decoration: underline" href="{{ adminUrl(array('controller'=>'lecture','action'=>'index','id'=>$row->id)) }}">{{ $lectureTable->getTotalLectures($row->id) }} {{ __lang('lectures') }}</a> )
                                         @php endif;  @endphp
-                                    </td>
-
-                                    <td>{{ $row->sort_order }}</td>
+                                    </td> 
                                     @php if(GLOBAL_ACCESS): @endphp
                                         <td>{{ adminName($row->admin_id) }}</td>
                                     @php endif;  @endphp

@@ -86,7 +86,7 @@
             @php
             $course = \App\Models\Course::find($row->id);
              @endphp
-             <div class="col-xl-3 col-lg-4 col-md-6">
+             <div class="col-xl-4 col-lg-4 col-md-6">
                 <div class="card">
                     <div class="card-body text-center">
                         <h5 class="mb-0">{{ courseType($row->type) }}</h5>
@@ -107,9 +107,7 @@
                                 <div class="text-job">{{ \App\Models\Admin::find($row->admin_id)->user->role->name }}</div>
                             </div>
                         </div>
-                        @endif
-                        <p class="mb-4 mt-3">449 Thompson St, Conway, SC, 29527</p>
-                        <button class="btn btn-primary btn-sm">Read More</button>
+                        @endif 
                         <div class="article-footer">
                             <div class="row">
                                 <div class="col-md-6">
@@ -154,7 +152,7 @@
                                             @if($row->type != 'c')
                                                 <a class="dropdown-item has-icon" href="{{ route('admin.student.instructors',['id'=>$row->id]) }}"><i class="fa fa-user"></i> {{ __lang('manage-instructors') }}</a>
                                             @endif
-                                            <a class="dropdown-item has-icon" href="{{ route('admin.student.mailsession',['id'=>$row->id]) }}"><i class="fa fa-envelope"></i> {{ __lang('send-message-enrolled') }}</a>
+                                            {{-- <a class="dropdown-item has-icon" href="{{ route('admin.student.mailsession',['id'=>$row->id]) }}"><i class="fa fa-envelope"></i> {{ __lang('send-message-enrolled') }}</a> --}}
                                             <a class="dropdown-item has-icon" href="{{ route('admin.student.duplicatesession',['id'=>$row->id]) }}"><i class="fa fa-copy"></i> {{ __lang('duplicate') }}</a>
                                             @if($row->type != 'c')
                                                 <a class="dropdown-item has-icon"  onclick="openModal('{{ __lang('change-type') }}: {{ addslashes($row->name) }}','{{ route('admin.session.sessiontype',['id'=>$row->id]) }}')" href="#" ><i class="fa fa-arrows-alt-v"></i> {{ __lang('change-session-type') }}</a>
@@ -168,41 +166,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        {{-- <div class="col-12 col-md-4 col-lg-4">
-            <article class="article article-style-c">
-                <div class="article-header">
-                    @if(!empty($row->picture))
-                    <div class="article-image" data-background="{{ resizeImage($row->picture,671,480,basePath()) }}">
-                    </div>
-                    @else
-                        <div class="article-image" data-background="{{ asset('img/course.png') }}" >
-                        </div>
-                    @endif 
-                </div>
-                <div class="article-details">
-                    <div class="article-category"><a href="#">{{ courseType($row->type) }}
-                        </a> <div class="bullet"></div> <a href="#" onclick="openModal('{{ __lang('students-for') }} {{ $row->name}}','{{ route('admin.student.sessionenrollees',['id'=>$row->id])  }}')">{{ $studentSessionTable->getTotalForSession($row->id) }} {{ __lang('students') }}</a></div>
-                    <div class="article-title">
-                        <h2><a href="{{ route('admin.student.editsession',['id'=>$row->id])  }}">{{ $row->name }}</a></h2>
-                    </div>
-                    @if(\App\Models\Admin::find($row->admin_id))
-                    <div class="article-user">
-                        <img alt="image" src="{{ profilePictureUrl(\App\Models\Admin::find($row->admin_id)->user->picture) }}">
-                        <div class="article-user-details">
-                            <div class="user-detail-name">
-                                <a href="#">{{ adminName($row->admin_id) }}</a>
-                            </div>
-                            <div class="text-job">{{ \App\Models\Admin::find($row->admin_id)->user->role->name }}</div>
-                        </div>
-                    </div>
-                    @endif
-
-
-                </div>
-
-            </article>
-        </div>
+            </div> 
             @section('footer')
                 @parent
             <div class="modal fade" tabindex="-1" role="dialog" id="infoModal-{{ $row->id }}">
@@ -474,7 +438,7 @@
                     </div>
                 </div>
             </div>
-            @endsection --}}
+            @endsection
 
         @endforeach
 

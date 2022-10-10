@@ -17,7 +17,7 @@ use Laminas\Db\Sql\Select;
  * @author ayokunle
  */
 class CertificateAssignmentTable extends BaseTable {
-    protected $tableName = 'assignment_certificate';
+    protected $tableName = 'assignment_certificates';
     protected $timeStamp = false;
     //protected $primary = 'certificate_id';
 

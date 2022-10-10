@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Form\AccountFilter;
+use App\Form\AccountForm;
 use App\Models\Country;
 use App\Models\Currency;
 use App\Http\Controllers\Controller;
@@ -11,8 +13,14 @@ use App\Lib\HelperTrait;
 use App\Models\TestGrade;
 use App\Form\FieldFilter;
 use App\Form\FieldForm;
+use App\Form\RoleFilter;
+use App\Form\RoleForm;
 use App\Form\SettingForm;
+use App\Models\AccountsTable;
+use App\Models\PermissionGroupTable;
+use App\Models\PermissionTable;
 use App\Models\RegistrationFieldTable;
+use App\Models\RolePermissionTable;
 use App\Models\RoleTable;
 use App\Models\SettingTable;
 use Illuminate\Http\Request;
@@ -764,54 +772,7 @@ class SettingController extends Controller
         return back();
     }
 
-
-    public function currencies(Request $request){
-
-        $currentCountry  = $this->getSetting('country_id');
-        $currencies = Currency::orderBy('id','desc')->paginate(30);
-        $pageTitle = __lang('Currencies');
-        $countries = Country::orderBy('currency_name')->groupBy('currency_code')->get();
-
-        return view('admin.setting.currencies',compact('currentCountry','currencies','pageTitle','countries'));
-    }
-
-    public function addcurrency(Request $request){
-        if(request()->isMethod('post')){
-            $country = $request->post('country');
-
-            $countryModel= Country::find($country);
-            if($countryModel && !Currency::where('country_id',$country)->first()){
-                $currency = new Currency();
-                $currency->country_id= $country;
-                $currency->exchange_rate = $request->post('exchange_rate');
-                $currency->save();
-                session()->flash('flash_message',__lang('currency-added'));
-            }
-        }
-        return back();
-    }
-
-    public function deletecurrency(Request $request,$id){
-
-        $currency= Currency::find($id);
-        if($currency){
-            $currency->delete();
-            session()->flash('flash_message',__lang('Currency removed'));
-        }
-        return back();
-    }
-
-    public function updatecurrency(Request $request,$id){
-
-        if(request()->isMethod('post')){
-            $rate = $request->post('rate');
-            $currency = Currency::find($id);
-            $currency->exchange_rate = $rate;
-            $currency->save();
-        }
-        exit('done');
-    }
-
+    
 
     public function language(Request $request){
         $output=[];

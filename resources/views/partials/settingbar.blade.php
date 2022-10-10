@@ -2,7 +2,7 @@
     <a href="javascript:void(0)" class="p-3 settingbar float-right"><i class="fa fa-close"></i></a>
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Settings" aria-expanded="true">Settings</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Themes" aria-expanded="false">Themes</a></li>
+        {{-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Themes" aria-expanded="false">Themes</a></li> --}}
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane vivify fadeIn active" id="Settings" aria-expanded="true">
@@ -23,7 +23,7 @@
                     @can('access','view_roles')<li ><a class="nav-link" href="@route('admin.roles.index')">{{ __lang('roles') }}</a></li>@endcan
                     @can('access','view_admins')<li ><a class="nav-link" href="@route('admin.admins.index')">{{ __lang('administrators-instructors') }}</a></li>@endcan
                     @can('access','view_test_grades')<li ><a class="nav-link" href="@route('admin.setting.testgrades')">{{ __lang('grades') }}</a></li>@endcan
-                    @can('access','view_widgets')<li ><a class="nav-link" href="@route('admin.widget.index')">{{ __lang('homepage-widgets') }}</a></li>@endcan 
+                    {{-- @can('access','view_widgets')<li ><a class="nav-link" href="@route('admin.widget.index')">{{ __lang('homepage-widgets') }}</a></li>@endcan  --}}
                     {{-- <li><a class="nav-link" href="{{ route('admin.menus.header') }}">@lang('default.header-menu')</a></li>  --}}
                     {{-- <li><a class="nav-link" href="{{ route('admin.menus.footer') }}">@lang('default.footer-menu')</a></li> --}}
                     @can('access','view_email_notifications')
@@ -35,7 +35,7 @@
                 </ul>
             </div>
         </div>  
-        <div role="tabpanel" class="tab-pane vivify fadeIn" id="Themes" aria-expanded="false">
+        {{-- <div role="tabpanel" class="tab-pane vivify fadeIn" id="Themes" aria-expanded="false">
             <div class="mb-4">
                 <h6 class="font-14 font-weight-bold text-muted">Theme Color</h6>
                 <ul class="choose-skin list-unstyled mb-0">
@@ -149,6 +149,6 @@
                 </div>
                 <button type="button" class="btn btn-primary btn-block mt-3">Upgrade Storage</button>
             </div>
-        </div> 
+        </div>  --}}
     </div>
 </div>

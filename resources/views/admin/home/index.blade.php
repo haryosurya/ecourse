@@ -101,42 +101,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="d-inline">{{ __lang('invoices') }}</h4>
-                    <div class="card-header-action">
-                        <a href="{{ route('admin.student.invoices') }}" class="btn btn-primary">{{ __lang('View All') }}</a>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <ul class="list-unstyled list-unstyled-border">
-                    @foreach($invoices as $invoice)
-                        @if($invoice->user)
-                        <li class="media">
-                            <img class="mr-3 rounded-circle" width="50" src="{{ profilePictureUrl($invoice->user->picture) }}" alt="avatar">
-                            <div class="media-body">
-                                @if($invoice->paid==1)
-                                <div class="badge badge-pill badge-success mb-1 float-right">{{ __lang('paid') }}</div>
-                                @else
-                                <div class="badge badge-pill badge-danger mb-1 float-right">{{ __lang('unpaid') }}</div>
-                                @endif
-
-                                <h6 class="media-title"><a class=" viewbutton "  @if($invoice->user->student)   data-id="{{ $invoice->user->student->id }}" data-toggle="modal" data-target="#simpleModal" title="@lang('default.view')"   @endif href="#">{{ $invoice->user->name }} {{ $invoice->user->last_name }}</a></h6>
-                                <div class="text-small text-muted">{{ price($invoice->amount) }}  @if(empty($invoice->paid)) <div class="bullet"></div>
-                                    <a href="{{ adminUrl(array('controller'=>'student','action'=>'approvetransaction','id'=>$invoice->id)) }}">{{ __lang('approve') }}</a> @endif <div class="bullet"></div> <span class="text-primary">Now</span></div>
-                            </div>
-                        </li>
-                        @endif
-                    @endforeach
-
-                    </ul>
-                </div>
-            </div>
-
-
-        </div>
-        <div class="col-lg-6 col-md-6 col-12">
+        
+        <div class="col-lg-12 col-md-12 col-12">
             <div class="card">
                 <div class="card-header">
                     <h4>{{ __lang('recent-courses') }}</h4>

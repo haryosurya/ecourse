@@ -30,13 +30,13 @@
             <div class="card-header">
                 <ul class="nav nav-tabs nav-pills" data-toggle="tabs">
                     <li class="nav-item"><a class="nav-link active"  href="#general" data-toggle="tab"><i class="fa fa-fw fa-cogs"></i> {{ __lang('general') }}</a></li>
-                    <li class="nav-item"><a class="nav-link"  href="#logo" data-toggle="tab"><i class="fa fa-fw fa-images"></i> {{ __lang('logo-icon') }}</a></li>
+                    <li class="nav-item"><a class="nav-link"  href="#logo" data-toggle="tab"><i class="fa fa-fw fa-image"></i> {{ __lang('logo-icon') }}</a></li>
                     <li class="nav-item"><a class="nav-link"  href="#menu" data-toggle="tab"><i class="fa fa-fw fa-list"></i> {{ __lang('menu') }}</a></li>
                      <li class="nav-item"><a class="nav-link"  href="#labels" data-toggle="tab"><i class="fa fa-fw fa-tag"></i> {{ __lang('labels') }}</a></li>
                      <li class="nav-item"><a class="nav-link"  href="#regis" data-toggle="tab"><i class="fa fa-fw fa-user-plus"></i> {{ __lang('registration') }}</a></li>
                     <li class="nav-item"><a class="nav-link"  href="#mail" data-toggle="tab"><i class="fa fa-fw fa-envelope"></i> {{ __lang('mail') }}</a></li>
                     <li class="nav-item"><a class="nav-link"  href="#info" data-toggle="tab"><i class="fa fa-fw fa-info"></i> {{ __lang('info') }}</a></li>
-                    <li class="nav-item"><a class="nav-link"  href="#social" data-toggle="tab"><i class="fa fa-fw fa-sign-in-alt"></i> {{ __lang('social-login') }}</a></li>
+                    <li class="nav-item"><a class="nav-link"  href="#social" data-toggle="tab"><i class="fa fa-fw fa-facebook"></i> {{ __lang('social-login') }}</a></li>
                     <li class="nav-item"><a class="nav-link"  href="#banner" data-toggle="tab"><i class="fa fa-fw fa-mobile"></i> {{ __lang('smart-banners') }}</a></li>
                 </ul>
             </div>

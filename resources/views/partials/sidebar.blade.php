@@ -22,14 +22,7 @@
                     <li class="g_heading"><i class="fas fa-book"></i>  <span> {{ __lang('courses-sessions') }}</span> </li>
                     <li ><a class="nav-link" href="{{ route('admin.student.sessions') }}"><i class="fa fa-book"></i><?= __lang('all-courses-session') ?></a></li>
                     <li><a class="nav-link" href="{{ route('admin.session.groups') }}"><i class="fa fa-graduation-cap"></i><?= __lang('manage-categories') ?></a></li>
-                    {{-- @can('access','add_course')
-                    <li class="g_heading"><i class="fas fa-plus"></i>  <span>{{ __lang('add-new') }} {{ __lang('courses-sessions') }}</span> </li>
-                    <li><a class="nav-link" href="@route('admin.session.addcourse')"><i class="fa fa-list-ul"></i>{{ __lang('online-course') }}</a></li>
-                        @can('access','add_session')
-                        <li><a class="nav-link" href="{{ route('admin.student.addsession',['type'=>'s']) }}"><i class="fa fa-list-ul"></i>{{ __lang('training-session')  }}</a></li>
-                        <li><a class="nav-link" href="{{ route('admin.student.addsession',['type'=>'b']) }}"><i class="fa fa-list-ul"></i>{{ __lang('training-online') }}</a></li>
-                        @endcan
-                    @endcan  --}}
+                    
                     {{-- videos --}}
                     @can('access-group','video') 
                     <li class="g_heading"> <i class="fas fa-video"></i><span>{{ __lang('video-library') }}</span> </li> 

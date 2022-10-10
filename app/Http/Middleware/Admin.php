@@ -38,8 +38,7 @@ class Admin
         $list = include '../app/Lib/permissions.php';
         $routeName = $request->route()->getName();
          if(isset($list[$routeName])){
-             $permission = $list[$routeName];
-           //  $permission = 'view_students'; //remove this later
+             $permission = $list[$routeName]; 
              if(!empty($permission) && !Auth::user()->can('access',$permission)){
                  abort(403);
              }

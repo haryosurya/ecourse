@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Models\Certificate;
+use App\Models\Certificate;
 use App\Models\Course;
 use App\Http\Controllers\Controller;
 use App\Models\Lesson;
@@ -49,12 +49,11 @@ class CertificateController extends Controller
         $form = new CertificateForm(null,$this->getServiceLocator());
         $filter = new CertificateFilter();
 
-        if (request()->isMethod('post')) {
-
-            $form->setInputFilter($filter);
-            $data = request()->all();
-            $form->setData($data);
-            if ($form->isValid()) {
+        $form->setInputFilter($filter);
+        $data = request()->all();
+        $form->setData($data);
+        if ($form->isValid()) {
+            if (request()->isMethod('post')) { 
 
                 $array = $form->getData();
                 $array[$lessonTable->getPrimary()]=0;
